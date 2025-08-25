@@ -8,7 +8,7 @@ import cartRouter from "./routes/cartRoute.js"
 import orderRouter from "./routes/orderRoute.js"
 //app config
 const app=express()
-const port = 4000
+const port = "https://food-delivery-app-tz9j.onrender.com"
 
 //middleware 
 app.use(express.json())
