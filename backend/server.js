@@ -12,7 +12,10 @@ const port = 4000
 
 //middleware 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: ["https://food-delivery-app-admin-hazel.vercel.app/", "https://food-delivery-app-jet-nine.vercel.app/"],
+  credentials: true
+}));
 
 //db connection
 
