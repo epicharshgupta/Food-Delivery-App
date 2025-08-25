@@ -43,8 +43,11 @@ const Orderplaced = () => {
         // console.log(orderData);
         // console.log(token);
         // console.log(url)
-        let response = await axios.post(url+"/api/order/place",orderData,{headers:{token}})
-        // console.log(orderData);
+let response = await axios.post(
+    url + "/api/order/place",
+    orderData,
+    { headers: { Authorization: `Bearer ${token}` } }   // 👈 yahan change
+);        // console.log(orderData);
 
         console.log(response.data) 
         if(response.data.success){
